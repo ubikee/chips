@@ -17,87 +17,16 @@
         <script data-main="js/main" src="js/vendor/requirejs/require.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="js/plugins.js"></script>
-        <style>
-            body {
-                min-height : 100vh;
-            }
-
-            .container {
-                display : flex;
-                flex-direction : row;
-            }
-
-            * {
-                border:dotted 1px red;
-            }
-            
-            aside {
-                flex: 0 0 60px;
-            }
-            
-            .wrapper {
-                flex: 1;
-                display :flex;
-                flex-direction:column;
-            }
-            
-            .wrapper > header {
-                flex-basis : 40px;
-                display : flex;
-            }
-            
-            header .logo {
-                flex-basis : 120px;
-            }
-            
-            header .tabbar {
-                flex:1;
-                display : flex;
-                justify-content: flex-end;
-                align-items: flex-end;
-            }
-            
-            main {
-                flex: 1;
-            }
-            
-            main > header {
-                display: block;
-            }
-            
-            footer {
-                flex-basis: 40px;
-            }
-            
-        </style>
     </head>
-    <body class="container">
-
-        <aside>
-            
-        </aside>
-
-        <div class="wrapper">
-            <header>
-                <div class="logo">logo</div>
-                <div class="tabbar">
-                    <div>tab1</div>
-                    <div>tab2</div>
-                    <div>tab3</div>
-                </div>
-            </header>
-
-            <main class="content">
-                <div class="slider">
-                    
-                    <chips-input value="chip-input1"></chips-input>
-                    <index-field value="index field 1"></index-field>
-                    
-                </div>
-            </main>
-            <footer>
-                footer
-            </footer>
-        </div>
+    <body>
+        <header>header</header>
+        <aside>aside</aside>
+        <main>
+            <index-field icon="icon1" label="label 1" value="field 1"></index-field>
+            <index-field icon="icon1" label="label 2" value="field 2"></index-field>
+            <index-field icon="icon1" label="label 3" value="field 3"></index-field>
+            <index-field icon="icon1" label="label 4" value="field 4"></index-field>
+        </main>
+        <footer>footer</footer>
     </body>
 </html>
