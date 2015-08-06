@@ -146,6 +146,10 @@ chip-user label {
 }
 
 chip-menuitem label {
+    text-align: center;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: .8px;
     color : rgba(10,10,10,.8);
 }
 
