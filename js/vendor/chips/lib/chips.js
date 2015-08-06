@@ -43,7 +43,6 @@ define(function () {
                                         attributes[key] = props[m];
                                     });
                             });
-                            console.log(item.is+' :');
                             items.push(React.createElement(item.is, attributes, [attributes['text']]));
                         });
                         

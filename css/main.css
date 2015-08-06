@@ -104,18 +104,23 @@ body {
 }
 
 header {
-    background: tomato;
+    border : dotted 1px #EEE;
     flex: 0 50px;
 }
 
 aside {
-    background: gold;
     flex: 0 50px;
+    background: #EEF;
+    border : dotted 1px #EEE;
+    padding: 5px;
+    
+    display:flex;
+    justify-content: space-around;
+    align-content: center;
 }
 
 main {
     text-align: left;
-    background: deepskyblue;
     flex: 1;
     order: 3;
 }
@@ -124,6 +129,31 @@ footer {
     background: lightgreen;
     flex : 0 50px;
     order: 4;
+}
+
+chip-user img {
+    overflow:hidden;
+    border : solid 1px;
+    border-color: rgba(10,10,10,.8);
+    border-radius: 100px;
+}
+
+chip-user label {
+    display:none;
+}
+
+chip-menuitem label {
+    color : rgba(10,10,10,.8);
+}
+
+chip-menuitem i {
+    display : none !important;
+    color : rgba(10,10,10,.8);
+    padding : 10px;
+}
+
+chip-menuitem:hover {
+    background: rgba(200,200,200,.5)
 }
 
 @media all and (min-width:600px) {
@@ -140,6 +170,9 @@ footer {
         flex: 0 100%;
         order:1;
         width:50px;
+        
+        flex-direction:column;
+        justify-content: flex-start;
     }
     main {
         padding : 10px;
@@ -148,6 +181,15 @@ footer {
         flex: 0 50px;;
         height:50px;
     }
+
+    chip-menuitem i {
+        display : inline-block !important;
+    }
+    
+    chip-menuitem  label {
+        display:none;
+    }
+    
 }
 
 @media all and (min-width:1000px) {
@@ -155,16 +197,27 @@ footer {
         width: calc(100% - 200px)
     }
     aside {
-        width:200px
+        width:200px;
+        display:flex;
+        flex-direction:column;
     }
     main {
         padding: 50px;
+    }
+
+    chip-menuitem {
+        flex:0 40px;
+    }
+    chip-menuitem i {
+        display:inline;
+    }
+    chip-menuitem  label {
+        display:inline;
     }
 }
 
 index-field > div {
     display : flex;
-    border: solid 1px;
 }
 
 index-field > div > label {
