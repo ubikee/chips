@@ -132,8 +132,11 @@ footer {
 }
 
 chip-user img {
-    overflow:hidden;
-    border : solid 1px;
+    max-width: 45px;
+    max-height: 45px;
+    padding: 5px;
+    overflow: hidden;
+    border: solid 1px;
     border-color: rgba(10,10,10,.8);
     border-radius: 100px;
 }
