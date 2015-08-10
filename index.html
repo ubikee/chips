@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -24,25 +24,45 @@
     </head>
     <body>
         <header>
-            <h5>neway</h5>
+            <h5>NEWAY</h5>
         </header>
         <aside>
             <chip-user  icon="img/face1.jpg" nickname="jomoespe" name=""></chip-user>
+
             <hr>
-            <chip-menuitem icon="fa fa-hand-o-right fa-lg" label="Go Now!"     href=""></chip-menuitem>
-            <chip-menuitem icon="fa fa-opencart fa-lg"     label="Reservation" href=""></chip-menuitem>
-            <chip-menuitem icon="fa fa-ticket fa-lg"       label="My Tickets"  href=""></chip-menuitem>
+            <chip-menuitem icon="fa fa-hand-o-right fa-lg" label="Go Now!"     href="#gonow"></chip-menuitem>
+            <chip-menuitem icon="fa fa-opencart fa-lg"     label="Reservation" href="#cart"></chip-menuitem>
+            <chip-menuitem icon="fa fa-ticket fa-lg"       label="My Tickets"  href="#tickets"></chip-menuitem>
             <hr>
-            <chip-menuitem icon="fa fa-car fa-lg"          label="Fleet"       href=""></chip-menuitem>
+
+            <!--chip-menuitem icon="fa fa-car fa-lg"          label="Fleet"       href=""></chip-menuitem>
             <chip-menuitem icon="fa fa-map-o fa-lg"        label="Map Room"    href=""></chip-menuitem>
             <chip-menuitem icon="fa fa-bar-chart fa-lg"    label="Statistics"  href=""></chip-menuitem>
             <chip-menuitem icon="fa fa-users fa-lg"        label="Customers"   href=""></chip-menuitem>
-            <hr>
+            <hr-->
+
         </aside>
-        <main> 
-            <div class="card-panel">
-                <chip-field icon="fa fa-car" label="label 1" value="field 1"></chip-field>
-            </div>
+        <main>         
+
+                <div id="gonow">
+                    <ul>
+                        <li class="card-panel">
+                            <h6>Go Home</h6>
+                            <button class="btn-floating pink">GO</button>
+                        </li>
+                        <li class="card-panel">
+                            <h6>Go to work</h6>
+                            <button class="btn-floating pink">GO</button>
+                        </li>
+                        <li class="card-panel">
+                            <h6>Go Shopping</h6>
+                            <button class="btn-floating pink">GO</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="cart"><h6>Reservation</h6></div>
+                <div id="tickets"><h6>My Tickets</h6></div>
+
         </main>
         <footer>footer</footer>
     </body>

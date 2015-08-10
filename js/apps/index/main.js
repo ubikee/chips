@@ -1,6 +1,6 @@
 define([require, '../../vendor/chips/index'], function (require, chips) {
 
-    var page = {
+    var app = {
         init: function () {
 
         },
@@ -9,7 +9,8 @@ define([require, '../../vendor/chips/index'], function (require, chips) {
         }
     };
 
-    var app = chips(page);
+    var app = chips(app);
+
 
     /**
      * Usage:

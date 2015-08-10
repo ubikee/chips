@@ -101,7 +101,7 @@ body {
     flex-flow: column;
     border : solid 1px;
     height : 100vh;
-    color : white;
+    color : rgba(30,30,30,.8);
 }
 
 header {
@@ -125,7 +125,9 @@ aside {
 main {
     padding: 10px;
     flex: 1;
-    order: 3;
+    order: 3;    
+
+    display : flex;
 }
 
 footer {
@@ -175,6 +177,38 @@ chip-menuitem:hover {
     background: #303F9F;
 }
 
+#gonow {
+    display : none;
+    min-height:1px;
+}
+
+#gonow:target {
+    display : block;
+    flex: 1 0 400px;
+}
+
+#cart {
+    display : none;
+    flex: 1 300px;
+}
+
+#cart:target {
+    display : block;
+    flex: 1 0 400px;
+}
+
+#tickets {
+    display : none;
+    flex: 1 300px;
+}
+
+#tickets:target {
+    display : block;
+    flex: 1 0 400px;
+}
+
+
+
 @media all and (min-width:600px) {
     body {
         flex-wrap : wrap;
@@ -215,6 +249,7 @@ chip-menuitem:hover {
 
     chip-menuitem:hover {
         background: #CCC;
+        border-radius: 100px;
     }
 
     chip-menuitem i {
@@ -242,7 +277,7 @@ chip-menuitem:hover {
         padding: 10px 50px 10px 50px;
         box-shadow: 
             -8px 0px 5px 0 rgba(0, 0, 0, 0.26), 
-            -8px 0px 10px 0 rgba(0, 0, 0, 0.22);     
+            -8px 0px 10px 0 rgba(0, 0, 0, 0.22);
     }
 
     footer {
