@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    overflow: hidden;
+}
+header {
+    flex: 0 50px;
+}
+aside {
+    flex: 0 50px;    
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+main {
+    flex: 1;
+    order: 3;    
+    display: flex;
+    overflow: hidden;
+}
+.page {
+    flex: none;
+    width:0px;
+    transition: width 0.75s;
+    transition-timing-function: initial;
+    transition-delay: initial;
+    overflow: hidden;
+}
+.page > * {
+    margin : 5px;
+    width : 92vw;
+}
+.page:target {
+    width:100%;
+}
+@media all and (min-width:600px) {
+    body {
+        flex-wrap : wrap;
+        align-content: flex-start;
+    }
+    header {
+        flex: 0 65px;
+        order: 2;
+        width: calc(100% - 60px);
+    }
+    aside {
+        flex: 0 100%;
+        order:1;
+        width:60px;
+        transition: width .25s;
+        transition-timing-function: initial;
+        transition-delay: initial;
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+    .page > * {
+        margin : 5px;
+        width : calc(96vw - 60px);
+    }
+}
+@media all and (min-width:1000px) {
+    header {
+        width: calc(100% - 200px);
+    }
+    aside {
+        width:200px;
+    }
+    .page > * {
+        margin : 5px;
+        width : calc(96vw - 200px);
+    }
+}
