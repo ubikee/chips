@@ -61,7 +61,6 @@ define(function () {
                 var proto = Object.create(HTMLElement.prototype);
 
                 proto.createdCallback = function () {
-                    console.log('WC created callback');
                     // project HTMLElement attributes to chip attributes << REFACTOR
                     var attrs = {};
                     if (this.attributes) {
@@ -80,6 +79,12 @@ define(function () {
                 proto.attachedCallback = function () {
                     console.log('WC attached callback');
                     // render React element
+                    
+                    for (var i=0; i< this.children.length; i++) {
+                        var child = this.children[i];
+                        this.appendchild(child)
+                    }
+                    
                     React.render(this.element, this);
                 };
 

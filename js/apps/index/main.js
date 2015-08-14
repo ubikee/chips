@@ -69,5 +69,14 @@ define([require, '../../vendor/chips/index'], function (require, chips) {
             }
         }
     });
+    
+    app.chips.register('chip-page', {
+        is:'div',
+        attributes : [],
+        view : {
+            
+        }
+    });
+    
 });
 

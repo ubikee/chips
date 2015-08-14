@@ -103,24 +103,31 @@ body {
 
 header {
     background: #3F51CB;
-    color : rgba(255,255,255,1);
-    padding: 5px 5px 5px 15px;
+    color : white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 aside {
-    background: #3F51CB;
-    color : rgba(255,255,255,1);
-    padding: 5px;
+    background: #DDD;
+    box-shadow: 
+        5px 5px 10px 0 rgba(0, 0, 0, 0.26),
+        5px 0px 10px 0 rgba(0, 0, 0, 0.22);
+}
+
+nav {
+    background: none;
 }
 
 main {
-    background: #FAFAFA;
-    padding: 10px;
+    background: none;
+    padding: 5px;
 }
 
 chip-user label {
     padding: 5px;
-    color : rgba(20,20,50,.8);
+    color : inherited;
     font-weight: 500;
     font-size: .9em;
 }
@@ -136,12 +143,7 @@ chip-user img {
     border-radius: 100px;
 }
 
-chip-user label {
-    display:none;
-}
-
 chip-menuitem label {
-    color : white;
     text-align: center;
     line-height: 48px;
     text-transform: uppercase;
@@ -150,12 +152,37 @@ chip-menuitem label {
 
 chip-menuitem i {
     color : white;
-    display : none !important;
     padding : 10px;
 }
 
+nav chip-menuitem i {
+    display : none !important;
+}
+
 chip-menuitem:hover {
-    background: #303F9F;
+    border-bottom: solid 2px white;
+}
+
+nav #menu {
+    display: none;
+}
+
+nav chip-user {
+    display: none;
+}
+
+@media all and (max-width:599px) {
+
+    nav {
+        background: #3F51CB;
+    }
+
+    chip-menuitem {
+        text-align: center;
+    }
+    chip-menuitem label {
+        color : white;
+    }
 }
 
 @media all and (min-width:600px) {
@@ -166,14 +193,14 @@ chip-menuitem:hover {
             -5px 0px 10px 0 rgba(0, 0, 0, 0.12);
     }
 
-    aside {
-        background: none;
-    }
-
     main {
         box-shadow: 
             -5px 0px 5px 0 rgba(0, 0, 0, 0.16), 
             -5px 0px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    header chip-user {
+        display: none;
     }
 
     chip-menuitem:hover {
@@ -181,7 +208,7 @@ chip-menuitem:hover {
         border-radius: 100px;
     }
 
-    chip-menuitem i {
+    nav chip-menuitem i {
         display : inline-block !important;
         color : rgba(20,20,50,.8);
     }
@@ -189,6 +216,14 @@ chip-menuitem:hover {
     chip-menuitem  label {
         display:none;
         color : rgba(20,20,50,.8);
+    }
+
+    header chip-menuitem {
+        display: none;
+    }
+
+    nav #menu {
+        display: block;
     }
 }
 
@@ -213,9 +248,14 @@ chip-menuitem:hover {
     chip-menuitem  label {
         display:inline;
     }
-
     chip-user label {
         display:inline-block;
+    }
+    nav chip-user {
+        display: block;
+    }
+    nav #menu {
+        display:none;
     }
 }
 

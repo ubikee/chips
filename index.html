@@ -25,23 +25,31 @@
     </head>
     <body>
         <header>
-            <h5>NEWAY</h5>
+            <chip-menuitem id="menu" icon="fa fa-bars fa-lg" label="" tabindex="0"></chip-menuitem>
+            <h5>Neway</h5>
+            <span></span>
+            <aside>
+                <chip-user  icon="img/face1.jpg" nickname="jomoespe" name=""></chip-user>
+            </aside>
         </header>
-        <aside>
+        <nav>
+            <chip-menuitem id="menu" icon="fa fa-bars fa-lg" label="" href="#menu"></chip-menuitem>
+            <hr>
             <chip-user  icon="img/face1.jpg" nickname="jomoespe" name=""></chip-user>
             <hr>
-            <chip-menuitem icon="fa fa-hand-o-right fa-lg" label="Go Now!"     href="#gonow"></chip-menuitem>
-            <chip-menuitem icon="fa fa-opencart fa-lg"     label="Reservation" href="#cart"></chip-menuitem>
-            <chip-menuitem icon="fa fa-ticket fa-lg"       label="My Tickets"  href="#tickets"></chip-menuitem>
+            <chip-menuitem icon="fa fa-exclamation fa-lg" label="Go Now!"     href="#gonow"></chip-menuitem>
+            <chip-menuitem icon="fa fa-opencart fa-lg"    label="Reservation" href="#cart"></chip-menuitem>
+            <chip-menuitem icon="fa fa-ticket fa-lg"      label="My Tickets"  href="#tickets"></chip-menuitem>
             <hr>
             <!--chip-menuitem icon="fa fa-car fa-lg"          label="Fleet"       href=""></chip-menuitem>
             <chip-menuitem icon="fa fa-map-o fa-lg"        label="Map Room"    href=""></chip-menuitem>
             <chip-menuitem icon="fa fa-bar-chart fa-lg"    label="Statistics"  href=""></chip-menuitem>
             <chip-menuitem icon="fa fa-users fa-lg"        label="Customers"   href=""></chip-menuitem>
             <hr-->
-        </aside>
-        <main>         
-            <div id="gonow" class="page">
+        </nav>
+
+        <main>            
+            <section id="gonow">
                 <ul>
                     <li class="card-panel">
                         <h6>Go Home</h6>
@@ -55,10 +63,40 @@
                         <h6>Go Shopping</h6>
                         <button class="btn-floating pink">GO</button>
                     </li>
+                    <li class="card-panel">
+                        <h6>Go Shopping</h6>
+                        <button class="btn-floating pink">GO</button>
+                    </li>
+                    <li class="card-panel">
+                        <h6>Go Shopping</h6>
+                        <button class="btn-floating pink">GO</button>
+                    </li>
+                    <li class="card-panel">
+                        <h6>Go Shopping</h6>
+                        <button class="btn-floating pink">GO</button>
+                    </li>
+                    <li class="card-panel">
+                        <h6>Go Shopping</h6>
+                        <button class="btn-floating pink">GO</button>
+                    </li>
                 </ul>
-            </div>
-            <div id="cart" class="page"><h6>Reservation</h6></div>
-            <div id="tickets" class="page"><h6>My Tickets</h6></div>
+            </section>
+            <section id="cart">
+                <form class="card-panel">
+                    <chip-input label="field1"></chip-input>
+                </form>
+            </section>
+            <section id="tickets">
+                <h6>Today</h6>
+                <ul style="display:flex; flex-wrap:wrap">
+                    <li class="card-panel" style="flex: 0 1 100px; margin:5px;">1<i class="btn-flat fa fa-ellipsis-v fa-lg"></i></li>
+                    <li class="card-panel" style="flex: 0 1 100px; margin:5px;">1<i class="btn-flat fa fa-ellipsis-v fa-lg"></i></li>
+                    <li class="card-panel" style="flex: 0 1 100px; margin:5px;">1<i class="btn-flat fa fa-ellipsis-v fa-lg"></i></li>
+                    <li class="card-panel" style="flex: 0 1 100px; margin:5px;">1<i class="btn-flat fa fa-ellipsis-v fa-lg"></i></li>
+                    <li class="card-panel" style="flex: 0 1 100px; margin:5px;">1<i class="btn-flat fa fa-ellipsis-v fa-lg"></i></li>
+                </ul>
+                <h6>Tomorrow</h6>
+            </section>
         </main>
     </body>
 </html>
