@@ -20,6 +20,7 @@ header > #menu:focus ~ aside {
 
 aside {
     position: absolute;
+    z-index: 1000;
     width : 200px;
     height: 100vh;
     top: 0px;
@@ -46,9 +47,12 @@ section {
     flex: none;
     width:0px;
     overflow: hidden;
-        
+     
+    transform:translateZ(0);
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
     transition: width 0.75s;
-    transition-timing-function: initial;
+    transition-timing-function: ease-in-out;
     transition-delay: initial;
 }
 section > * {
