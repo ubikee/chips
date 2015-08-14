@@ -146,10 +146,6 @@ chip-user img {
     border-radius: 100px;
 }
 
-chip-menuitem {
-    text-align: center;
-}
-
 chip-menuitem label {
     text-align: center;
     line-height: 48px;
@@ -164,6 +160,11 @@ chip-menuitem i {
 
 nav chip-menuitem i {
     display : none !important;
+}
+
+chip-menuitem {
+    border-bottom: solid 1px transparent  ;
+    border-top: solid 2px transparent;
 }
 
 chip-menuitem:hover {
@@ -187,6 +188,7 @@ nav chip-user {
     chip-menuitem {
         text-align: center;
     }
+    
     chip-menuitem label {
         color : white;
     }
@@ -201,7 +203,7 @@ nav chip-user {
     }
 
     nav {
-        padding : 10px 0px 10px 0px;
+        padding : 8px;
     }
     
     main {
@@ -214,9 +216,22 @@ nav chip-user {
         display: none;
     }
 
-    chip-menuitem:hover {
-        background: #CCC;
+    chip-menuitem {
         border-radius: 100px;
+        border-top: solid 1px transparent;
+        border-bottom:solid 2px transparent;
+        text-align: center;
+    }
+    
+    chip-menuitem:hover {
+        border-top: solid 1px transparent;
+        border-bottom:solid 2px transparent;
+        background-color: #CDCDCD;
+    }
+    
+    chip-menuitem:active {
+        border-bottom: solid 2px white  ;
+        border-top: solid 1px #AAA;
     }
 
     nav chip-menuitem i {
@@ -241,17 +256,22 @@ nav chip-user {
 @media all and (min-width:1000px) {
     header {
         box-shadow: 
-            -8px 0px 5px 0 rgba(0, 0, 0, 0.26), 
-            -8px 0px 10px 0 rgba(0, 0, 0, 0.22);        
+            -8px 0px 5px 0 rgba(0, 0, 0, 0.16), 
+            -8px 0px 10px 0 rgba(0, 0, 0, 0.12);        
+    }
+    nav {
+        padding:10px;
     }
     main {
         box-shadow: 
-            -8px 0px 5px 0 rgba(0, 0, 0, 0.26), 
-            -8px 0px 10px 0 rgba(0, 0, 0, 0.22);
+            -8px 0px 5px 0 rgba(0, 0, 0, 0.16), 
+            -8px 0px 10px 0 rgba(0, 0, 0, 0.12);
     }
 
     chip-menuitem {
         flex:0 40px;
+        text-align: initial;
+        
     }
     chip-menuitem i {
         display:inline;
