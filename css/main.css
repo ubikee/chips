@@ -143,6 +143,10 @@ chip-user img {
     border-radius: 100px;
 }
 
+chip-menuitem {
+    text-align: center;
+}
+
 chip-menuitem label {
     text-align: center;
     line-height: 48px;
@@ -193,6 +197,10 @@ nav chip-user {
             -5px 0px 10px 0 rgba(0, 0, 0, 0.12);
     }
 
+    nav {
+        padding : 10px 0px 10px 0px;
+    }
+    
     main {
         box-shadow: 
             -5px 0px 5px 0 rgba(0, 0, 0, 0.16), 

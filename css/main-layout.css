@@ -24,8 +24,8 @@ aside {
     width : 200px;
     height: 100vh;
     top: 0px;
-    left: -200px;
-    
+    left: -220px;
+        
     transition: left 0.75s;
     transition-timing-function: initial;
     transition-delay: initial;
@@ -47,7 +47,6 @@ section {
     flex: none;
     width:0px;
     overflow: hidden;
-     
     transform:translateZ(0);
     -ms-transform: translateZ(0);
     -webkit-transform: translateZ(0);
@@ -61,6 +60,9 @@ section > * {
 }
 section:target {
     width:100%;
+    overflow-y: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 @media all and (max-width:599px) {
@@ -97,6 +99,11 @@ section:target {
     }
     nav hr {
         display: block;
+        flex: none;
+    }
+    nav * {
+        line-height: 1.1em;
+        flex:none;
     }
     section > * {
         margin : 5px;
